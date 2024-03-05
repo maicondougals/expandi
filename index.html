@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Text</title>
+  <style>
+    #texto {
+      display: none;
+    }
+    .container{
+        background-color: green;
+        width: 200px;
+        height: 100px;
+    }
+    .expandido{
+        height: 500px;
+        width: 200px;
+        background-color: green;
+    }
+  </style>
+</head>
+<body>
+<div class="container"> 
+<button onclick="toggleText()">Mostrar/Esconder Texto </button>
+<p id="texto">Este é o texto que será exibido/oculto. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+     Voluptates impedit aliquid qui, sunt blanditiis distinctio, maxime aut hic quasi iste cum illum ut a. Distinctio 
+     accusantium ut sunt reiciendis ad.</p>
+</div>
+
+<script>
+   
+
+  function toggleText() {
+    var textoElement = document.getElementById("texto");
+    var area = document.querySelector(".container")
+    
+    
+
+    if (textoElement.style.display === "none") {
+      textoElement.style.display = "block";
+      area.classList.add("expandido")
+    } else {
+      textoElement.style.display = "none";
+      area.classList.remove("expandido")
+    }
+  }
+</script>
+
+</body>
+</html>
